@@ -1,0 +1,1163 @@
+* {
+  box-sizing: border-box;
+}
+.nobound {
+  margin: 0%;
+  padding: 0%;
+}
+.fs {
+  width: 100%;
+  height: 100%;
+}
+/*   Mixin for perfect absolute positioning - centering    */
+.p-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.bg-setup {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-content-zooming: none;
+}
+.glow {
+  animation: 1s glow infinite alternate;
+}
+.small-text-style {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  .small-text-style {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  .small-text-style {
+    font-size: 100%;
+  }
+}
+.rotateAngle {
+  color: black;
+  transform: scale(1.3) rotate(90deg) translate(5px, 5px);
+  transition: transform 1s;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  .rotateAngle {
+    transform: scale(1.1) rotate(90deg) translate(1px, 5px);
+  }
+}
+.clear {
+  clear: both;
+}
+@-webkit-keyframes glow {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes glow {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body,
+html,
+div,
+p,
+a,
+img,
+header,
+footer,
+ul,
+li,
+section,
+nav,
+aside,
+article,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  margin: 0%;
+  padding: 0%;
+}
+body:focus,
+html:focus,
+div:focus,
+p:focus,
+a:focus,
+img:focus,
+header:focus,
+footer:focus,
+ul:focus,
+li:focus,
+section:focus,
+nav:focus,
+aside:focus,
+article:focus,
+figure:focus,
+figcaption:focus,
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus {
+  border: none;
+  outline: none;
+}
+html {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-content-zooming: none;
+}
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+  margin: 0%;
+  padding: 0%;
+}
+body,
+html {
+  background-image: url(../assets/cream_pixels_@2X.png);
+  width: 100%;
+  height: 100%;
+  color: #2f2f2f;
+  font-family: 'Rubik', sans-serif;
+  font-size: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+  text-transform: uppercase;
+}
+body a:link,
+body a:visited,
+body a:hover,
+body a:active {
+  color: gray;
+  text-decoration: none;
+}
+body #ldcc-download-alert {
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20%;
+  color: gray;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 150%;
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: lightgray 0 0 20px;
+  padding: 2%;
+  z-index: 9999 !important;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-download-alert {
+    width: 90%;
+    padding: 4% 4%;
+    font-size: 75%;
+    box-shadow: gray 0 0 20px;
+    line-height: 200%;
+    top: 20px;
+  }
+}
+body #ldcc-download-alert:hover {
+  color: rgba(221, 9, 124, 0.75) !important;
+  box-shadow: gray 0 0 20px;
+}
+body #ldcc-download-alert:hover i {
+  transform: scale(1.1);
+}
+body #ldcc-download-alert i {
+  display: block;
+  font-size: 250%;
+  padding-top: 8%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-download-alert i {
+    display: inline;
+    font-size: 120%;
+    padding-top: 0;
+    padding-left: 5%;
+  }
+}
+body header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  height: 95%;
+  padding: 10% 7%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header {
+    padding: 10%;
+    padding-top: 17%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header {
+    padding: 15%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body header {
+    display: none;
+  }
+}
+body header #header-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body header .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body header .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body header .container-fluid .row #ldcc-main-header {
+  color: rgba(221, 9, 124, 0.75);
+  text-align: left;
+  font-size: 230%;
+  line-height: 150%;
+  padding-bottom: 1%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-header {
+    text-align: left;
+    font-size: 150%;
+    letter-spacing: 0.1em;
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-header {
+    font-size: 200%;
+    padding-top: 5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-header {
+    padding-top: 10%;
+  }
+}
+body header .container-fluid .row #ldcc-main-subheader {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  padding-bottom: 14%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-subheader {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-subheader {
+    font-size: 100%;
+  }
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-main-subheader {
+    padding-bottom: 20%;
+    text-align: left;
+  }
+}
+body header .container-fluid .row h3 {
+  display: inline-block;
+  color: rgba(221, 9, 124, 0.75);
+  font-size: 180%;
+  padding-bottom: 2%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row h3 {
+    font-size: 100%;
+    padding-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row h3 {
+    font-size: 140%;
+  }
+}
+body header .container-fluid .row .ldcc-info-date {
+  color: gray;
+}
+body header .container-fluid .row .ldcc-info-time {
+  font-size: 150%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row .ldcc-info-time {
+    font-size: 80%;
+  }
+}
+body header .container-fluid .row span {
+  display: inline;
+  color: gray;
+  font-size: 180%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row span {
+    font-size: 100%;
+  }
+}
+body header .container-fluid .row #ldcc-landing-image {
+  width: 90%;
+  height: auto;
+  float: right;
+  padding-top: 15%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-landing-image {
+    width: 50%;
+    padding-top: 0;
+    transform: translate(0px, -30px);
+  }
+}
+@media only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-landing-image {
+    transform: translate(0px, -10px);
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-landing-image {
+    width: 50%;
+    padding-top: 0;
+  }
+}
+body header .container-fluid .row .ldcc-organisator {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row .ldcc-organisator {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row .ldcc-organisator {
+    font-size: 100%;
+  }
+}
+body header .container-fluid .row #ldcc-en-savoir-plus {
+  display: inline-block;
+  width: 300px;
+  padding-top: 11%;
+  transition: transform 1s;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus {
+    transform: translate(0px, 155px);
+  }
+}
+@media only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus {
+    transform: translate(0px, 190px);
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus {
+    font-size: 140%;
+    transform: translate(0px, 310px);
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus {
+    transform: translate(0px, 410px);
+  }
+}
+body header .container-fluid .row #ldcc-en-savoir-plus:hover {
+  text-decoration: none;
+  transform: scale(1.1) translate(10px, 0);
+  transition: transform 1s;
+}
+body header .container-fluid .row #ldcc-en-savoir-plus div {
+  width: 300px;
+}
+body header .container-fluid .row #ldcc-en-savoir-plus div h1,
+body header .container-fluid .row #ldcc-en-savoir-plus div h5 {
+  display: inline;
+  vertical-align: middle;
+}
+body header .container-fluid .row #ldcc-en-savoir-plus div h1 {
+  color: rgba(221, 9, 124, 0.75);
+}
+body header .container-fluid .row #ldcc-en-savoir-plus div h5 {
+  width: 100%;
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  padding-left: 1%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus div h5 {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body header .container-fluid .row #ldcc-en-savoir-plus div h5 {
+    font-size: 100%;
+  }
+}
+body .section-header {
+  color: rgba(221, 9, 124, 0.75);
+  padding-bottom: 7%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body .section-header {
+    font-size: 120%;
+    padding-bottom: 10%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body .section-header {
+    font-size: 140%;
+  }
+}
+body .section-header i {
+  color: #464646;
+  padding-right: 1%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body .section-header i {
+    padding-right: 3%;
+  }
+}
+body #ldcc-introduction {
+  background-image: url(../assets/background-pattern-v2.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding: 10% 7% 11.5%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction {
+    padding: 18% 10%;
+  }
+}
+@media only screen and (min-width: 330px) and (max-width: 400px) and (orientation: portrait), only screen and (min-width: 400px) and (max-width: 413px) and (orientation: portrait), only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction {
+    padding: 18% 10% 20%;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 375px) and (orientation: portrait) {
+  body #ldcc-introduction {
+    padding: 18% 10% 22%;
+  }
+}
+@media only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction {
+    padding-bottom: 18%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #ldcc-introduction {
+    display: none;
+  }
+}
+body #ldcc-introduction .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-introduction .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-introduction .container-fluid .row h1 {
+  color: white;
+}
+body #ldcc-introduction .container-fluid .row p {
+  text-align: justify;
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  width: 100% !important;
+  color: white;
+  font-size: 90%;
+  line-height: 150%;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 100%;
+  }
+}
+body #ldcc-introduction .container-fluid .row p span {
+  font-size: 100%;
+  float: right;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 60%;
+  }
+}
+@media only screen and (min-width: 330px) and (max-width: 400px) and (orientation: portrait), only screen and (min-width: 400px) and (max-width: 413px) and (orientation: portrait), only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 58%;
+    line-height: 160%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 413px) and (orientation: portrait), only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 60%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 85%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-introduction .container-fluid .row p {
+    font-size: 91%;
+  }
+}
+body #ldcc-programme {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding: 5% 7% 7%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-programme {
+    padding: 18% 10% 9%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme {
+    padding: 10% 10% 7%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #ldcc-programme {
+    display: none;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .section-header {
+    padding-bottom: 15%;
+  }
+}
+body #ldcc-programme .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-programme .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header {
+  padding-bottom: 4%;
+  height: auto;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait), only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header {
+    padding-bottom: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header {
+    padding-bottom: 7%;
+  }
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-time,
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header {
+  display: inline-block;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-time,
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header {
+    font-size: 60%;
+  }
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-time {
+  color: rgba(221, 9, 124, 0.75);
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  font-size: 90%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header {
+    font-size: 100%;
+  }
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-header i {
+  color: rgba(221, 9, 124, 0.75);
+  font-size: 110%;
+  font-weight: 700;
+  padding-right: 1%;
+  transition: transform 1s;
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-events {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  padding: 1% 0 1% 2%;
+  margin: 2% 0;
+  float: right;
+  border-left: 0.25px grey solid;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-events {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-events {
+    font-size: 100%;
+  }
+}
+@media only screen and (max-width: 479px) and (orientation: portrait), only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-events {
+    padding: 2% 0 2% 4%;
+    margin: 4% 0;
+    float: left;
+  }
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-event {
+  width: 90%;
+  margin-bottom: 2%;
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-event:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait), only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-event {
+    width: 80%;
+    font-size: 50%;
+    margin-bottom: 3%;
+    float: left;
+  }
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-topic-author {
+  font-size: 50%;
+  float: right;
+}
+body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-mid-header {
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  color: rgba(221, 9, 124, 0.75);
+  font-size: 90%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-mid-header {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-programme .container-fluid .row #ldcc-programme-content .ldcc-programme-section-header .ldcc-programme-topic-mid-header {
+    font-size: 100%;
+  }
+}
+body #ldcc-comment-venir {
+  background-image: url(../assets/background-pattern-2-v2.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding: 10% 10% 5%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-comment-venir {
+    padding: 27% 10% 45%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 413px) and (orientation: portrait), only screen and (min-width: 413px) and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-comment-venir {
+    padding-bottom: 35%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body #ldcc-comment-venir {
+    padding: 20% 10% 20%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-comment-venir {
+    padding: 15% 10% 15%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #ldcc-comment-venir {
+    display: none;
+  }
+}
+body #ldcc-comment-venir .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-comment-venir .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-comment-venir .container-fluid .row h1 {
+  color: white;
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6:first-child {
+  padding: 0 10% 25%;
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6:first-child {
+    display: none;
+  }
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 {
+  text-align: center;
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  color: white;
+  font-size: 90%;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 {
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 {
+    padding-top: 5%;
+  }
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 hr {
+  opacity: 0.7;
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 address {
+  padding: 20% 0 0;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 address {
+    padding: 10% 0 0;
+    line-height: 150%;
+  }
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 p.commune {
+  padding-top: 5%;
+  opacity: 0.8;
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 #google-map {
+  width: 100%;
+  height: 400px;
+  outline: 5px white solid;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-comment-venir .container-fluid .row .col-lg-6 #google-map {
+    height: 250px;
+  }
+}
+body #ldcc-comment-venir .container-fluid .row .col-lg-6 #google-map iframe {
+  width: 100%;
+  height: 100%;
+}
+body #ldcc-prix {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding: 5% 7% 7%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-prix {
+    padding: 5% 10% 18%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait) {
+  body #ldcc-prix {
+    padding: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix {
+    padding: 10%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #ldcc-prix {
+    display: none;
+  }
+}
+body #ldcc-prix .section-header {
+  padding-bottom: 8%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait), only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix .section-header {
+    padding-bottom: 15%;
+  }
+}
+body #ldcc-prix .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-prix .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 {
+  padding: 0 10%;
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 {
+    padding: 0 5% 10%;
+    display: inline-block;
+    width: 49%;
+  }
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: gray;
+  outline: 5px white solid;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 50px;
+  transition: transform 1s, box-shadow 1s;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0 50px;
+  transition: transform 1s, box-shadow 1s;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte {
+    margin: 10% 0 20%;
+  }
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte:first-child {
+    margin-bottom: 30%;
+  }
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte hr {
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class {
+  position: relative;
+  height: 100px;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content h3 {
+  color: #464646;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content h3 {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content h3 {
+    font-size: 90%;
+  }
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content h6 {
+  font-size: 70%;
+  padding-top: 2%;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait), only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-class .ldcc-prix-class-content h6 {
+    font-size: 50%;
+  }
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-avant,
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-apres {
+  padding: 10% 0;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-avant h2,
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-apres h2 {
+  color: rgba(221, 9, 124, 0.75);
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-avant h6,
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-apres h6 {
+  font-size: 70%;
+  padding-top: 2%;
+  opacity: 0.5;
+}
+body #ldcc-prix .container-fluid .row .col-lg-6 .ldcc-prix-carte .ldcc-prix-apres h2 {
+  color: #994191;
+}
+body #ldcc-prix .container-fluid .prix-info-row {
+  text-align: center;
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  padding: 7% 0 0;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .prix-info-row {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-prix .container-fluid .prix-info-row {
+    font-size: 100%;
+  }
+}
+body #ldcc-prix .container-fluid .prix-info-row span {
+  color: rgba(221, 9, 124, 0.75);
+}
+body #ldcc-contact {
+  background-image: url(../assets/background-pattern-v2.png);
+  width: 100%;
+  height: 100%;
+  height: auto;
+  padding: 10% 7% 7%;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-contact {
+    padding: 18% 10%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-contact {
+    padding: 10% 10% 7%;
+  }
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #ldcc-contact {
+    display: none;
+  }
+}
+body #ldcc-contact .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-contact .container-fluid .row {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+body #ldcc-contact .container-fluid .row h1 {
+  color: white;
+}
+body #ldcc-contact .container-fluid .row p {
+  text-align: justify;
+  color: gray;
+  font-size: 70%;
+  font-weight: 700;
+  color: white;
+  font-size: 100%;
+  line-height: 150%;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  body #ldcc-contact .container-fluid .row p {
+    font-size: 60%;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) and (orientation: portrait), only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  body #ldcc-contact .container-fluid .row p {
+    font-size: 100%;
+  }
+}
+body #ldcc-contact .container-fluid .row a:link,
+body #ldcc-contact .container-fluid .row a:visited,
+body #ldcc-contact .container-fluid .row a:hover,
+body #ldcc-contact .container-fluid .row a:active {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+body #ldcc-contact .container-fluid .row a:hover {
+  opacity: 1;
+}
+body #ldcc-contact .container-fluid .row a i {
+  color: #464646;
+  opacity: 1 !important;
+}
+body #ldcc-contact .container-fluid .row .ldcc-retour {
+  color: white;
+  float: right;
+}
+body #ldcc-contact .container-fluid .row .ldcc-retour i {
+  float: right;
+  color: #464646;
+  font-size: 180%;
+}
+body #landscape {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+  display: none;
+}
+@media only screen and (max-width: 736px) and (orientation: landscape), only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
+  body #landscape {
+    display: block;
+  }
+}
+body #landscape .landscape-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body #landscape .landscape-content i {
+  font-size: 400%;
+  padding-bottom: 10%;
+}
+body #landscape .landscape-content h6 {
+  color: #464646;
+}
+body #landscape #header-tab-landscape {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body #landscape #header-tab-landscape-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
